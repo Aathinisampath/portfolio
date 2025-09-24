@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aathini S S — Portfolio</title>
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #9aa7bf;
+      --accent: #6ee7b7;
+      --glass: rgba(255,255,255,0.03);
+      --maxw: 1000px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; background:linear-gradient(180deg,#071024 0%, var(--bg) 100%); color:#e6eef8; -webkit-font-smoothing:antialiased}
+    .container{max-width:var(--maxw); margin:36px auto; padding:24px}
+
+    header{display:flex; align-items:center; gap:16px}
+    .avatar{width:88px; height:88px; border-radius:12px; background:linear-gradient(135deg,var(--accent), #60a5fa); display:flex; align-items:center; justify-content:center; font-weight:700; color:#052023; font-size:28px}
+    h1{margin:0; font-size:24px}
+    p.lead{margin:6px 0 0; color:var(--muted)}
+
+    .grid{display:grid; grid-template-columns:1fr 320px; gap:20px; margin-top:24px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr} .sidebar{order:2}}
+
+    .card{background:var(--card); padding:18px; border-radius:12px; box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+
+    .about h2, .projects h2, .skills h2 {margin-top:0}
+    .projects-list{display:grid; gap:12px}
+    .project{background:var(--glass); padding:12px; border-radius:10px}
+    .project h3{margin:0 0 6px}
+    .project p{margin:0; color:var(--muted); font-size:14px}
+
+    .meta{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px}
+    .chip{background:rgba(255,255,255,0.03); padding:6px 10px; border-radius:999px; color:var(--muted); font-size:13px}
+
+    .sidebar .card{position:sticky; top:20px}
+    .contact form{display:flex; flex-direction:column; gap:8px}
+    input, textarea{background:transparent; border:1px solid rgba(255,255,255,0.06); padding:10px; border-radius:8px; color:inherit}
+    a.btn{display:inline-block; padding:10px 14px; border-radius:10px; background:linear-gradient(90deg,var(--accent), #60a5fa); color:#032; text-decoration:none; font-weight:600}
+
+    footer{margin-top:28px; color:var(--muted); font-size:13px; text-align:center}
+
+    /* small utilities */
+    .row{display:flex; gap:12px; align-items:center}
+    .skills-list{display:flex; flex-wrap:wrap; gap:8px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">AS</div>
+      <div>
+        <h1>Aathini S S</h1>
+        <p class="lead">3rd-year B.Tech — Artificial Intelligence & Data Science student • Aspiring ML/AI Engineer</p>
+        <div class="meta">
+          <span class="chip">Location: Tamil Nadu, India</span>
+          <span class="chip">Email: aathini@example.com</span>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section>
+        <div class="card about">
+          <h2>About me</h2>
+          <p style="color:var(--muted)">I'm an AI & Data Science student who enjoys building practical ML applications and chatbots. I focus on NLP, web development for ML-powered apps, and rapid prototyping. Below are two projects I completed as part of my coursework and mini-projects.</p>
+          <div style="margin-top:14px" class="row">
+            <div>
+              <strong>Education</strong>
+              <div style="color:var(--muted)">B.Tech — Artificial Intelligence & Data Science (3rd year)</div>
+            </div>
+            <div style="margin-left:18px">
+              <strong>Tools</strong>
+              <div style="color:var(--muted)">Python, FastAPI, Flask, scikit-learn, TensorFlow, Java, Git</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card projects" style="margin-top:16px">
+          <h2>Projects</h2>
+          <div class="projects-list">
+            <div class="project">
+              <h3>GrievanceBot — Complaint helper</h3>
+              <p>Mini-project: a chatbot that helps users lodge public-service complaints (power cuts, water, garbage) with structured forms and suggested actions. Built with conversational flows and a simple backend to store submissions.</p>
+            </div>
+
+            <div class="project">
+              <h3>AI-Based Tamil Nadu College Counselling Chatbot</h3>
+              <p>A chatbot to assist students with college selection and counselling in Tamil Nadu, using rules + ML to suggest colleges, courses, and placement-related information.</p>
+            </div>
+
+            <div class="project">
+              <h3>More</h3>
+              <p>Coursework: DSA in Java, REST API projects, and small web apps integrating ML models with FastAPI/Flask.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card skills" style="margin-top:16px">
+          <h2>Skills</h2>
+          <div class="skills-list">
+            <span class="chip">Python</span>
+            <span class="chip">Machine Learning</span>
+            <span class="chip">NLP</span>
+            <span class="chip">FastAPI / Flask</span>
+            <span class="chip">Java</span>
+            <span class="chip">HTML / CSS / JS</span>
+            <span class="chip">Git & GitHub</span>
+          </div>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <div class="card">
+          <h2>Contact</h2>
+          <p style="color:var(--muted)">Want to collaborate or see more projects? Drop a message.</p>
+          <div id="contact" class="contact" style="margin-top:8px">
+            <form action="mailto:aathini@example.com" method="post" enctype="text/plain">
+              <input type="text" name="name" placeholder="Your name" />
+              <input type="email" name="email" placeholder="Your email" />
+              <textarea name="message" rows="4" placeholder="Message"></textarea>
+              <div style="display:flex; gap:8px; margin-top:8px">
+                <button class="btn" type="submit">Send</button>
+                <a class="btn" href="#" onclick="alert('Replace # with your CV file path to enable download')">Download CV</a>
+              </div>
+            </form>
+          </div>
+
+          <div style="margin-top:12px">
+            <strong style="display:block">Links</strong>
+            <div style="color:var(--muted); margin-top:6px">
+              <div>GitHub: <a href="#" style="color:var(--accent)">github.com/yourhandle</a></div>
+              <div>LinkedIn: <a href="#" style="color:var(--accent)">linkedin.com/in/yourhandle</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h2>Availability</h2>
+          <p style="color:var(--muted)">Open to internships & part-time projects from Jan — Feb. Prefer remote/hybrid roles.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      Built by Aathini S S — AI & Data Science Student • © 2025
+    </footer>
+  </div>
+</body>
+</html>
